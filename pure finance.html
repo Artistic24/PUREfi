@@ -12,9 +12,9 @@
      <link rel="stylesheet" href="css/PUREFi-style.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
      <link rel="stylesheet" type="text/css" href="logopure.css">
-     <!-- https://bytewebster.com/ -->
-     <!-- https://bytewebster.com/ -->
-     <!-- https://bytewebster.com/ -->
+     <!-- https://pureFinance.io/ -->
+     <!-- https://pureFinance.io/ -->
+     <!-- https://pureFinance.io/ -->
 </head>
 <body>
 
@@ -38,8 +38,8 @@
                     </button>
            
                     <!-- lOGO TEXT HERE -->
-                    <img src="logopure.png" class="img-responsive" <a href="index.html" class="navbar-brand">PURE FINANCE
-                    width="60" height="60"></a> 
+                    <img src="logopure.png" class="img-responsive" <a href="index.html" class="navbar-brand">PURE FINANCE <>
+                    width="20" height="20"></a> 
                </div> 
                
                <!-- MENU LINKS -->
@@ -572,7 +572,7 @@
                                                        
                                                        <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="repeat Password" length="8" required>
 
-                                                       <class type="checkbox" id="togglePassword">show Password</class>
+                                                       <label type="checkbox" id="togglePassword">show Password</label>
                                                        <span id="passwordMatch"></span>
                                                        
                                                        <input type="submit" class="form-control" name="submit" value="Submit">
@@ -583,7 +583,7 @@
                                                        const passwordMatchText = document.getElementById('passwordMatch');
                                                        const togglePasswordButton = document.getElementById('togglePassword');
                                                       // Toggle password visibility
-                                                     togglePasswordButton.addEventListener('click', () => {
+                                                     togglePasswordButton.addEventListener('click', (event) => {
                                                      if (passwordInput.type === 'password') {
                                                      passwordInput.type = 'text';
                                                      repeatPasswordInput.type = 'text';
