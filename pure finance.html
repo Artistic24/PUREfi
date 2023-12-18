@@ -581,43 +581,25 @@
                                                        const repeatPasswordInput = document.getElementById('repeatPassword');
                                                        const passwordMatchText = document.getElementById('passwordMatch');
                                                        const togglePasswordButton = document.getElementById('togglePassword');
-                                                      // Toggle password visibility
-                                                     togglePasswordButton.addEventListener('click', (event) => {
-                                                     if (passwordInput.type === 'password') {
-                                                     passwordInput.type = 'text';
-                                                     repeatPasswordInput.type = 'text';
+                                                    // Check if passwords match
+                                                     confirmPasswordInput.addEventListener('keyup', () => {
+                                                     if (passwordInput.value === repeatPasswordInput.value) {
+                                                     passwordMatchText.textContent = 'Passwords match';
+                                                     passwordMatchText.style.color = 'green';
                                                      } else {
-                                                     passwordInput.type = 'password';
-                                                     repeatPasswordInput.type = 'password';
+                                                     passwordMatchText.textContent = 'Passwords do not match';
+                                                     passwordMatchText.style.color = 'red';
                                                      }
                                                      });
 
-                                                     // Validate password length
-                                                     if (password.length !== 8) {
-                                                     alert("Password must be exactly 8 numbers.");
-                                                     return false;
-                                                     }
-                                                        // Validate password match
-                                                     if (password !== repeatPassword) {
-                                                     alert("Passwords do not match.");
-                                                     return false;
-                                                     }
-                                                     // Function to validate the signup form
-                                                     function validateSignupForm() {
-                                                     // Get the values entered by the user
-                                                     var password = document.getElementById("password").value;
-                                                     var repeatPassword = document.getElementById("repeatPassword").value;
-
-                                                     // Disable password input if 8 numbers have already been entered
-                                                     if (password.length === 8) {
-                                                     document.getElementById("password").disabled = true;
-                                                     }
-                                                    
-
-                                                     // If all validations pass, the form is submitted successfully
-                                                     alert("Signup successful!");
-                                                     return true;
-                                                     }
+                                                    // Password length validation
+                                                    passwordInput.addEventListener('keyup', () => {
+                                                    if (passwordInput.value.length > 8) {
+                                                    passwordInput.setCustomValidity('Password not exceed 8 characters');
+                                                    } else {
+                                                    passwordInput.setCustomValidity('');
+                                                    }
+                                                    });
                                                   </script>    
                                                   
                                                   </form>
