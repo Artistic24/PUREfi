@@ -579,37 +579,41 @@
                                                       
                                                   <script>
                                                        const passwordInput = document.getElementById('password');
-                                                       const confirmPasswordInput = document.getElementById('repeatPassword');
+                                                       const repeatPasswordInput = document.getElementById('repeatPassword');
                                                        const passwordMatchText = document.getElementById('passwordMatch');
                                                        const togglePasswordButton = document.getElementById('togglePassword');
                                                       // Toggle password visibility
                                                      togglePasswordButton.addEventListener('click', () => {
                                                      if (passwordInput.type === 'password') {
                                                      passwordInput.type = 'text';
-                                                     confirmPasswordInput.type = 'text';
+                                                     repeatPasswordInput.type = 'text';
                                                      } else {
                                                      passwordInput.type = 'password';
-                                                     confirmPasswordInput.type = 'password';
+                                                     repeatPasswordInput.type = 'password';
                                                      }
                                                      });
-
-                                                     // Function to validate the signup form
-                                                     function validateSignupForm() {
-                                                     // Get the values entered by the user
-                                                     var password = document.getElementById("password").value;
-                                                     var repeatPassword = document.getElementById("repeatPassword").value;
 
                                                      // Validate password length
                                                      if (password.length !== 8) {
                                                      alert("Password must be exactly 8 numbers.");
                                                      return false;
                                                      }
-
-                                                     // Validate password match
+                                                        // Validate password match
                                                      if (password !== repeatPassword) {
                                                      alert("Passwords do not match.");
                                                      return false;
                                                      }
+                                                     // Function to validate the signup form
+                                                     function validateSignupForm() {
+                                                     // Get the values entered by the user
+                                                     var password = document.getElementById("password").value;
+                                                     var repeatPassword = document.getElementById("repeatPassword").value;
+
+                                                     // Disable password input if 8 numbers have already been entered
+                                                     if (password.length === 8) {
+                                                     document.getElementById("password").disabled = true;
+                                                     }
+                                                    
 
                                                      // If all validations pass, the form is submitted successfully
                                                      alert("Signup successful!");
@@ -625,7 +629,7 @@
                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                                                        <input type="password"class="form-control" id="password" name="password" placeholder="Enter Password" minlength="8" maxlength="8" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit">
-                                                       <a href="https://www.facebook.com/groups/bytewebster">Forgot your password?</a>
+                                                       <a href="https://www.facebook.com/groups/">Forgot your password?</a>
                                                   </form>
                                              </div>
                                         </div>
