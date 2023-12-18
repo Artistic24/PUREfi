@@ -38,8 +38,7 @@
                     </button>
            
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">PURE FINANCE
-                    <img src="logopure.png" class="img-responsive" 
+                    <img src="logopure.png" class="img-responsive" <a href="index.html" class="navbar-brand">PURE FINANCE
                     width="60" height="60"></a> 
                </div> 
                
@@ -90,7 +89,7 @@
                     <div class="col-md-6 col-sm-12">
                          <div class="home-video">
                               <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe src="https://youtu.be/J6ANCPcHokA?si=ix3isQHpgZWbfEbg" frameborder="0" allowfullscreen></iframe>
+                                   <iframe src="https://youtu.be/J6ANCPcHokA" frameborder="0" allowfullscreen></iframe>
                               </div>
                          </div>
                     </div>
@@ -516,15 +515,15 @@
                                         <p>Call us <span>(+237) 671765861</span></p>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/groups/bytewebster" class="bi bi-facebook" attr="facebook icon"></a></li>
-                                        <li><a href="https://twitter.com/ByteWebster" class="bi bi-twitter-x"></a></li>
-                                        <li><a href="https://www.instagram.com/bytewebster/" class="bi bi-instagram"></a></li>
+                                        <li><a href="https://www.facebook.com/groups/PUREfi" class="bi bi-facebook" attr="facebook icon"></a></li>
+                                        <li><a href="https://twitter.com/pure__finance" class="bi bi-twitter-x"></a></li>
+                                        <li><a href="https://www.instagram.com/PUREfi/" class="bi bi-instagram"></a></li>
 
-                                        <li><a href="https://bytewebster.com/" class="bi bi-threads"></a></li>
-                                        <li><a href="https://bytewebster.com/" class="bi bi-youtube"></a></li>
-                                        <li><a href="https://bytewebster.com/" class="bi bi-telegram"></a></li>
-                                        <li><a href="https://bytewebster.com/" class="bi bi-reddit"></a></li>
-                                        <li><a href="https://bytewebster.com/" class="bi bi-whatsapp"></a></li>
+                                        <li><a href="https://pure finance.io/" class="bi bi-threads"></a></li>
+                                        <li><a href="https://www.youtube.com/@pure__finance/" class="bi bi-youtube"></a></li>
+                                        <li><a href="https://t.me/pure__finance/" class="bi bi-telegram"></a></li>
+                                        <li><a href="https://pure finance.io/" class="bi bi-reddit"></a></li>
+                                        <li><a href="https://pure finance.io/" class="bi bi-whatsapp"></a></li>
                                    </ul>
                               </div>
                          </div>
@@ -569,9 +568,9 @@
 
                                                        <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
                                                        
-                                                       <input type="password"class="form-control" id="password" name="password" placeholder="Enter Password" length="8" required>
+                                                       <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" length="8" required>
                                                        
-                                                       <input type="password"class="form-control" id="confirmPassword" name="confirmPassword" placeholder="confirm Password" length="8" required>
+                                                       <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="repeat Password" length="8" required>
 
                                                        <class type="checkbox" id="togglePassword">show Password</class>
                                                        <span id="passwordMatch"></span>
@@ -580,7 +579,7 @@
                                                       
                                                   <script>
                                                        const passwordInput = document.getElementById('password');
-                                                       const confirmPasswordInput = document.getElementById('confirmPassword');
+                                                       const confirmPasswordInput = document.getElementById('repeatPassword');
                                                        const passwordMatchText = document.getElementById('passwordMatch');
                                                        const togglePasswordButton = document.getElementById('togglePassword');
                                                       // Toggle password visibility
@@ -594,25 +593,28 @@
                                                      }
                                                      });
 
-                                                     // Check if passwords match
-                                                     confirmPasswordInput.addEventListener('keyup', () => {
-                                                     if (passwordInput.value === confirmPasswordInput.value) {
-                                                     passwordMatchText.textContent = 'Passwords match';
-                                                     passwordMatchText.style.color = 'green';
-                                                     } else {
-                                                     passwordMatchText.textContent = 'Passwords do not match';
-                                                     passwordMatchText.style.color = 'red';
-                                                     }
-                                                     });
+                                                     // Function to validate the signup form
+                                                     function validateSignupForm() {
+                                                     // Get the values entered by the user
+                                                     var password = document.getElementById("password").value;
+                                                     var repeatPassword = document.getElementById("repeatPassword").value;
 
-                                                    // Password length validation
-                                                    passwordInput.addEventListener('keyup', () => {
-                                                    if (passwordInput.value.length > 8) {
-                                                    passwordInput.setCustomValidity('Password not exceed 8 characters');
-                                                    } else {
-                                                    passwordInput.setCustomValidity('');
-                                                    }
-                                                    });
+                                                     // Validate password length
+                                                     if (password.length !== 8) {
+                                                     alert("Password must be exactly 8 numbers.");
+                                                     return false;
+                                                     }
+
+                                                     // Validate password match
+                                                     if (password !== repeatPassword) {
+                                                     alert("Passwords do not match.");
+                                                     return false;
+                                                     }
+
+                                                     // If all validations pass, the form is submitted successfully
+                                                     alert("Signup successful!");
+                                                     return true;
+                                                     }
                                                   </script>    
                                                   
                                                   </form>
