@@ -38,13 +38,13 @@
                     </button>
            
                     <!-- lOGO TEXT HERE -->
-                    <img src="logopure.png" class="img-responsive" <a href="index.html" class="navbar-brand"> PURE FINANCE </a> 
+                    <a href="index.html" class="navbar-brand">PURE FINANCE
                </div> 
                 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">HOME</a></li>
+                        <li><a href="#about" class="smoothScroll"></a></li>
                          <li><a href="#about" class="smoothScroll">ABOUT</a></li>
                          <li><a href="#blog" class="smoothScroll">BLOG</a></li>
                          <li><a href="#work" class="smoothScroll">OUR SERVICES</a></li>
@@ -54,14 +54,13 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="https://www.facebook.com/groups/PUREfi"><i class="bi bi-facebook"></i></a></li>
-                         <li><a href="https://twitter.com/pure__finance"/><i class="bi bi-twitter-x"></i></a></li>
-                         <li><a href="https://t.me/pure__finance"/><i class="bi bi-telegram"></i></a></li>
+                         <li><a href="https://www.facebook.com/groups/PUREfi/"><i class="bi bi-facebook"></i></a></li>
+                         <li><a href="https://twitter.com/pure__finance/"><i class="bi bi-twitter-x"></i></a></li>
+                         <li><a href="https://t.me/pure__finance/"><i class="bi bi-telegram"></i></a></li>
                          <li><a href="https://www.youtube.com/@pure__finance/"><i class="bi bi-youtube"></i></a></li>
                          <li><a href="https://www.instagram.com/PUREfi/"><i class="bi bi-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in </a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign up </a></li>
-                    </ul>
+                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign up/sign in </a></li>
+                   </ul>
                </div>
 
           </div>
@@ -88,10 +87,9 @@
 
                     <div class="col-md-6 col-sm-12">
                          <div class="home-video">
-                              <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe src="https://youtu.be/embed/J6ANCPcHokA" frameborder="0" allowfullscreen></iframe>
-                              </div>
-                         </div>
+                              
+                             <iframe width="560" height="315" src="https://www.youtube.com/embed/17QRFlml4pA?si=v8gQaDAC6eQRnGcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                         </div>   
                     </div>
                     
                </div>
@@ -556,57 +554,119 @@
 
                                         <!-- NAV TABS -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create New account</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
-                                        </ul>
-
-                                        <!-- TAB PANES -->
-                                        <div class="tab-content">
+                                            <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create New Account</a></li>
+                                            <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
+                                          </ul>
+                                          
+                                          <!-- TAB PANES -->
+                                          <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
-
-                                                       <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
-                                                       
-                                                       <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" length="8" required>
-                                                       
-                                                       <input type="password" class="form-control" id="repeatPassword" name="repeatPassword" placeholder="repeat Password" length="8" required>
-
-                                                       <class type="checkbox" id="togglePassword">show Password</class>
-                                                       <span id="passwordMatch"></span>
-                                                       
-                                                       <input type="submit" class="form-control" name="submit" value="Submit">
-                                                      
-                                                  <script>
-                                                       const passwordInput = document.getElementById('password');
-                                                       const repeatPasswordInput = document.getElementById('repeatPassword');
-                                                       const passwordMatchText = document.getElementById('passwordMatch');
-                                                       const togglePasswordButton = document.getElementById('togglePassword');
-                                                    // Check if passwords match
-                                                     confirmPasswordInput.addEventListener('keyup', () => {
-                                                     if (passwordInput.value === repeatPasswordInput.value) {
-                                                     passwordMatchText.textContent = 'Passwords match';
-                                                     passwordMatchText.style.color = 'green';
-                                                     } else {
-                                                     passwordMatchText.textContent = 'Passwords do not match';
-                                                     passwordMatchText.style.color = 'red';
-                                                     }
-                                                     });
-
-                                                    // Password length validation
-                                                    passwordInput.addEventListener('keyup', () => {
-                                                    if (passwordInput.value.length > 8) {
-                                                    passwordInput.setCustomValidity('Password not exceed 8 characters');
-                                                    } else {
-                                                    passwordInput.setCustomValidity('');
-                                                    }
-                                                    });
-                                                  </script>    
-                                                  
-                                                  </form>
+                                               <form action="#" method="post">
+                                                 <input type="text" class="form-control" id="signup_name" name="name" placeholder="Enter Your Name" required>
+                                                 <input type="email" class="form-control" id="signup_email" name="email" placeholder="Enter Your Email" required>
+                                                 <input type="password" class="form-control" id="signup_password" name="password" placeholder="Enter Password">
+                                                 <input type="password" class="form-control" id="signup_confirmPassword" name="confirmPassword" placeholder="Repeat Password">
+                                                 <input type="checkbox" id="signup_togglePassword" onclick="showPassword('signup_password')"> Show Password
+                                                 <span id="signup_passwordMatch" style="color: red;"></span>
+                                                 <input type="submit" class="form-control" name="signup_submit" value="Signup" onclick="validateForm(event, 'signup')">
+                                                 <input type="button" class="form-control" name="signup_reset" value="Reset" onclick="resetForm('signup')">
+                                               </form>
                                              </div>
-
-                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
+                                           </div>
+                                           
+                                           <script>
+                                             function showPassword(passwordId) {
+                                               var passwordInput = document.getElementById(passwordId);
+                                               if (passwordInput.type === "password") {
+                                                 passwordInput.type = "text";
+                                               } else {
+                                                 passwordInput.type = "password";
+                                               }
+                                             }
+                                           
+                                             function validateForm(event, formId) {
+                                               event.preventDefault();
+                                               var nameInput = document.getElementById(formId + '_name');
+                                               var emailInput = document.getElementById(formId + '_email');
+                                               var passwordInput = document.getElementById(formId + '_password');
+                                               var confirmPasswordInput = document.getElementById(formId + '_confirmPassword');
+                                               var passwordMatchSpan = document.getElementById(formId + '_passwordMatch');
+                                           
+                                               // Reset error messages
+                                               passwordMatchSpan.textContent = "";
+                                           
+                                               // Check if all conditions are met
+                                               if (nameInput.value === "") {
+                                                 passwordMatchSpan.textContent = "Please enter your name.";
+                                                 passwordMatchSpan.style.color = "red";
+                                               } else if (emailInput.value === "") {
+                                                 passwordMatchSpan.textContent = "Please enter your email.";
+                                                 passwordMatchSpan.style.color = "red";
+                                               } else if (passwordInput.value === "") {
+                                                 passwordMatchSpan.textContent = "Please enter a password.";
+                                                 passwordMatchSpan.style.color = "red";
+                                               } else if (confirmPasswordInput.value === "") {
+                                                 passwordMatchSpan.textContent = "Please confirm your password.";
+                                                 passwordMatchSpan.style.color = "red";
+                                               } else if (passwordInput.value !== confirmPasswordInput.value) {
+                                                 passwordMatchSpan.textContent = "Passwords do not match.";
+                                                 passwordMatchSpan.style.color = "red";
+                                               } else {
+                                                 // Clear error messages
+                                                 passwordMatchSpan.textContent = "";
+                                           
+                                                 // Add your custom logic for form submission here
+                                                 var formData = {
+                                                   name: nameInput.value,
+                                                   email: emailInput.value,
+                                                   password: passwordInput.value
+                                                 };
+                                           
+                                                 // Send the form data to the server or perform any other desired action
+                                                 // For example, you can make an AJAX request to submit the form data
+                                                 // Here's an example using the Fetch API:
+                                                 fetch('/submit-form', {
+                                                   method: 'POST',
+                                                   body: JSON.stringify(formData),
+                                                   headers: {
+                                                     'Content-Type': 'application/json'
+                                                   }
+                                                 })
+                                                   .then(response => {
+                                                     // Handle the response from the server
+                                                     console.log('Form submitted successfully!');
+                                                     // You can redirect to another page or display a success message
+                                                   })
+                                                   .catch(error => {
+                                                     // Handle any errors that occurred during form submission
+                                                     console.error('Error submitting form:', error);
+                                                     // Display an error message to the user if needed
+                                                   });
+                                               }
+                                             }
+                                           
+                                             function resetForm(formId) {
+                                               // Code to reset the specified form (signup or signin)
+                                               document.getElementById(formId + '_name').value = "";
+                                               document.getElementById(formId + '_email').value = "";
+                                               document.getElementById(formId + '_password').value = "";
+                                               document.getElementById(formId + '_confirmPassword').value = "";
+                                               document.getElementById(formId + '_togglePassword').checked = false;
+                                               document.getElementById(formId + '_passwordMatch').textContent = "";
+                                             }
+                                           
+                                             // Function to switch between sign-up and sign-in forms
+                                             document.querySelector('a[href="#sign_in"]').addEventListener('click', function () {
+                                               document.getElementById('sign_up').classList.remove('active');
+                                               document.getElementById('sign_in').classList.add('in', 'active');
+                                             });
+                                           
+                                             document.querySelector('a[href="#sign_up"]').addEventListener('click', function () {
+                                               document.getElementById('sign_in').classList.remove('in', 'active');
+                                               document.getElementById('sign_up').classList.add('active');
+                                             });
+                                           </script> 
+                                            <div role="tabpanel" class="tab-pane fade in" id="sign_in">
                                                   <form action="#" method="post">
                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                                                        <input type="password"class="form-control" id="password" name="password" placeholder="Enter Password" minlength="8" maxlength="8" required>
